@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ Hogwarts Magic Adventure ✨</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <h1>✨ Welcome to Hogwarts Magic! 🧙‍♂️</h1>
+
+    
+    <div class="container">
+        <!-- Characters Section -->
+        <div class="section characters">
+            <h2>🦁 Cool Characters</h2>
+            <ul id="characters-list">
+                <% characters.forEach(character => { %>
+                    <li class="character-item">
+                        <strong><%= character.name %></strong>
+                        <span>House: <%= character.house || "Mystery" %></span>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+
+        <!-- Spells Section -->
+        <div class="section spells">
+            <h2>⚡ Awesome Spells</h2>
+            <ul id="spells-list">
+                <% spells.forEach(spell => { %>
+                    <li class="spell-item">
+                        <strong><%= spell.name %></strong> - <%= spell.description || "Secret Power!" %>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Sorting Hat Modal -->
+    <div id="sorting-hat-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">✖</span>
+            <h2>🎉 Your Hogwarts House!</h2>
+            <p id="house-result"></p>
+        </div>
+    </div>
+</body>
+</html>

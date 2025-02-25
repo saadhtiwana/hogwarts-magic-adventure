@@ -1,0 +1,184 @@
+/* Reset and Fun Font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Comic Sans MS", "Poppins", sans-serif;
+  background: #1a0033; /* Deep magical purple */
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+/* Twinkling Stars Background */
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-radial-gradient(circle, #fff 1px, transparent 2px, transparent 10px);
+  background-size: 20px 20px;
+  opacity: 0.4;
+  animation: twinkle 3s infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.7; }
+}
+
+/* Magical Title */
+h1 {
+  color: #ffeb3b; /* Bright yellow */
+  font-size: 3rem;
+  text-shadow: 0 0 10px #ffeb3b, 0 0 20px #ff5722;
+  animation: glow 2s infinite;
+}
+
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 10px #ffeb3b, 0 0 20px #ff5722; }
+  50% { text-shadow: 0 0 20px #ffeb3b, 0 0 30px #ff5722; }
+}
+
+/* Buttons */
+.buttons {
+  margin: 20px 0;
+}
+
+button {
+  background: #ff5722; /* Bright orange */
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 3px solid #ffeb3b;
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+button:hover {
+  background: #e91e63; /* Pinkish-magenta */
+  transform: scale(1.1) rotate(5deg);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Container for Sections */
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Sections */
+.section {
+  background: rgba(255, 255, 255, 0.1);
+  border: 3px dashed #ffeb3b;
+  padding: 20px;
+  width: 45%;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 235, 59, 0.5);
+  transition: transform 0.3s;
+}
+
+.section:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+.characters { background: rgba(244, 67, 54, 0.2); } /* Reddish for characters */
+.spells { background: rgba(33, 150, 243, 0.2); } /* Bluish for spells */
+
+h2 {
+  color: #ffeb3b;
+  font-size: 2rem;
+  text-shadow: 0 0 10px #ff5722;
+}
+
+/* Lists */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 15px;
+  font-size: 1.3rem;
+  border-bottom: 2px dotted #ffeb3b;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 5px 0;
+  border-radius: 10px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+li:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(10px);
+}
+
+li strong {
+  color: #ffeb3b;
+}
+
+li span {
+  color: #b2ff59; /* Bright green */
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(33, 150, 243, 0.9); /* Magical blue */
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #ff5722;
+  z-index: 10;
+  width: 80%;
+  max-width: 400px;
+}
+
+.modal-content {
+  padding: 20px;
+}
+
+.close {
+  color: #ffeb3b;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.close:hover {
+  transform: scale(1.2) rotate(90deg);
+}
+
+#house-result {
+  font-size: 1.5rem;
+  color: #ffeb3b;
+  text-shadow: 0 0 10px #ff5722;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      align-items: center;
+  }
+  .section {
+      width: 90%;
+      margin-bottom: 20px;
+  }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+}
