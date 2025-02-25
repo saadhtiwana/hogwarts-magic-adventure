@@ -32,7 +32,7 @@ Welcome to **Hogwarts Magic Adventure**, a fun project that fetches and displays
 
 3. Start the server:
    ```bash
-   node server.js
+   node index.js
    ```
 
 4. Open your browser and go to:
